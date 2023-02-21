@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrapper">
+
+    <div id="logo">
+        <img src="/logo.png" alt="">
+    </div>
+
+    <nav>
+        <a href="/main">Strona główna</a>
+        <a href="/contact">Kontakt</a>
+        <a href="/main">Strona główna</a>
+
+    </nav>
+
+    <form method="post">
+        <input type="text" name="pattern">
+        <input type="submit" value="Szukaj">
+    </form>
+
+    <div id="content" >
+
+        <div class="book" th:each="book : ${books}">
+        <div class="title" th:text="${book.title}"></div>
+        <div class="author" th:text="${book.author}"></div>
+        <div class="price" th:text="'Cena: ' + ${book.price} + ' zł'"></div>
+        <div class="isbn" th:text="'ISBN: ' + ${book.isbn}"></div>
+        <div class="quantity" th:text="'Pozostała ilość: ' + ${book.quantity}"></div>
+
+    </div>
+
+    </div>
+
+
+
+
+
+</div>
+</body>
+</html>
