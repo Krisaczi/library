@@ -1,13 +1,14 @@
-package pl.ksiegarnia.database;
+package pl.ksiegarnia.database.memory;
 
 import org.springframework.stereotype.Component;
+import pl.ksiegarnia.database.IBookDAO;
 import pl.ksiegarnia.model.Book;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class BookDataBase implements IBookDAO{
+public class BookDataBase implements IBookDAO {
     private final List<Book> books = new ArrayList<>();
 
     public BookDataBase(){
