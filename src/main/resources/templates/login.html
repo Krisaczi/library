@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Title</title>
   <link rel="stylesheet" href="style.css">
+  <script src="/validator.js"></script>
 </head>
 <body>
 <div id="wrapper">
@@ -19,9 +20,9 @@
 
   </nav>
 
-  <form method="post">
-    <input type="text" placeholder="Login" name="login">
-    <input type="password" placeholder="Password" name="password">
+  <form method="post" onsubmit="return validateLogin()">
+    <input type="text" placeholder="Login" name="login" id="login">
+    <input type="password" placeholder="Password" name="password" id="password">
     <input type="submit" value="Zaloguj się">
   </form>
 
